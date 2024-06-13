@@ -1,0 +1,14 @@
+def is_prime(n, i=2):
+    if n <= 2:
+        return n == 2
+    if n % i == 0 or i * i > n:
+        return i * i > n
+    return is_prime(n, i + 1)
+
+def generate_primes_recursive(n):
+    if n > 1:
+        generate_primes_recursive(n - 1)
+        if is_prime(n):
+            print(n)
+
+generate_primes_recursive(20)
