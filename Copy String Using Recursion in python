@@ -1,9 +1,8 @@
-def copy_string(source, destination, index=0):
-    if index == len(source):
+def copy_string(source, destination=""):
+    if not source:
         return destination
-    destination += source[index]
-    return copy_string(source, destination, index + 1)
+    return copy_string(source[1:], destination + source[0])
+
 source_str = "Hello, World!"
-destination_str = ""
-result = copy_string(source_str, destination_str)
+result = copy_string(source_str)
 print(result)
