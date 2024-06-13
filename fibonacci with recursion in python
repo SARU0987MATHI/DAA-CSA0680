@@ -1,0 +1,11 @@
+def fibonacci(n):
+    return n if n <= 1 else fibonacci(n-1) + fibonacci(n-2)
+
+nterms = 10
+
+if nterms > 0:
+    print("Fibonacci sequence:")
+    for i in range(nterms):
+        print(fibonacci(i))
+else:
+    print("Please enter a positive integer")
