@@ -1,0 +1,8 @@
+def is_perfect(num):
+    return sum(i for i in range(1, num) if num % i == 0) == num
+
+def perfect_numbers_up_to(limit):
+    return [i for i in range(1, limit + 1) if is_perfect(i)]
+
+limit = 10000
+print("Perfect numbers up to", limit, "are:", perfect_numbers_up_to(limit))
